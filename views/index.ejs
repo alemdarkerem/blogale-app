@@ -1,0 +1,22 @@
+<%- include ("partials/header.ejs") %>
+<div class="title-box">
+  <h1>Blog Posts</h1>
+</div>
+
+<ul class="blog-list">
+  <br>
+  <% for (let i = posts.length - 1; i >= 0; i--) { %>
+    <li>
+      <h2><%= posts[i].title %></h2>
+      <p><%= posts[i].content %></p>
+    </li>
+  <% } %>
+</ul>
+<button class="feedback-input-button"><a href="/new">Create a New Post</a></button>
+
+<form action="/delete" method="POST">
+  <button id="button-last" class="feedback-input-button" type="delete" value="DELETE">Delete Last Post</button>
+</form>
+
+
+<%- include ("partials/footer.ejs") %>
