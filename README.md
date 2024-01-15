@@ -1,0 +1,1 @@
+# blogale-app
